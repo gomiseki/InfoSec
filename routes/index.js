@@ -6,6 +6,7 @@ let title = '정보보안 과제4';
 
 /* GET signup listing. */
 router.get('/', function(req, res, next) {
+  title = '정보보안 과제4';
   let result;
   console.log(req.query.user)
   if(req.query.user){
