@@ -7,10 +7,11 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <form  method="post">
-      ID<input type="text" name="id">
-      PW<input type="text" name="password">
-      <button type="submit">sign in</button><a href="/signup">회원가입</a>
+    <form method="post">
+      ID를 입력해주세요<input type="text" name="id">
+      Nickname을 입력해주세요<input type="text" name="nickname">
+      PW를 입력해주세요<input type="text" name="password">
+      <button type="submit">Create</button>
     </form>
     <% if (err) { %> <h1><%= err %></h1> <% } %>
   </body>

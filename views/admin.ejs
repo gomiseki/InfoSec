@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>정보보안 과제4</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table>
+      <caption>user</caption>
+      <tr>
+        <th>id</th>
+        <th>nickname</th>
+        <th>sha256 password</th>
+      </tr> 
+      <% if (title!='정보보안 과제4') { 
+        for(var i in table) {
+        %> 
+        <tr>
+          <td><%= table[i].id %></td>
+          <td><%= table[i].nickname %></td>
+          <td><%= table[i].password %></td>
+        </tr> 
+        <% }
+      }%>
+    </table>
+  </body>
+</html>
