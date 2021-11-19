@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name : db
+    environment:
+      - MYSQL_DATABASE=test
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "3307:3307"
+    volumes:
+      - "./init/:/docker-entrypoint-initdb.d/"
+  infosec:
+    build:
+      context: .
+    container_name: infosec
+    ports:
+      - "80:3000"
